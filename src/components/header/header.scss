@@ -1,0 +1,69 @@
+@import '../../vars.scss';
+header {
+  background-color: $header-background-color;
+  h1 {
+    position: absolute;
+    left: 10000000px;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    gap: 2rem;
+  }
+  .header-buttons-mobile-container {
+    display: flex;
+    gap: 1rem;
+    .all-chars-button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 45px;
+      height: 45px;
+      background-color: $button-color;
+      border-radius: 15px;
+    }
+    .favorites-button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 45px;
+      height: 45px;
+      background-color: $button-color;
+      border-radius: 15px;
+    }
+  }
+  .header-buttons-desktop-container {
+    display: none;
+    button {
+      font-family: $kelly-slab-font;
+    }
+  }
+}
+@media (min-width: 400px) {
+  header {
+    .header-container {
+      justify-content: space-between;
+      gap: 4rem;
+    }
+    .header-buttons-mobile-container {
+      display: none;
+    }
+    .header-buttons-desktop-container {
+      display: flex;
+      gap: 2rem;
+      button {
+        padding: 0.8rem 1.6rem;
+        background-color: $button-color;
+        border: none;
+        border-radius: 0.6rem;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
